@@ -27,6 +27,12 @@ jobs:
           gradle-version: '9.3.1'
       - name: Extract Android project
         run: unzip -q Pdf_g_v04.zip -d android-project
+      # The ZIP uses an invalid Tesseract coordinate and omits its JitPack repository.
+      - name: Fix Tesseract dependency in extracted project
+        working-directory: android-project
+        run: |
+          sed -i 's/cz.adaptive:tesseract4android:4.7.0/cz.adaptech.tesseract4android:tesseract4android:4.7.0/' app/build.gradle.kts
+          sed -i '/dependencyResolutionManagement {/,/^}/ s/mavenCentral()/mavenCentral()\n    maven { url = uri("https:\/\/jitpack.io") }/' settings.gradle.kts
       - name: Create debug signing key
         working-directory: android-project
         run: |
