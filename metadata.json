@@ -1,0 +1,6 @@
+{
+  "name": "PDF Gallery",
+  "description": "PDF Gallery - Read, scroll, crop question snippets, Google Lens copy, unlimited notes, and share to AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- v3.0.0 app logo (Hasib_bro PDF Gallery) supplied by the user -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:width="66dp"
+        android:height="66dp"
+        android:drawable="@drawable/ic_app_logo_new"
+        android:gravity="center" />
+</layer-list>
