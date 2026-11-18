@@ -30,15 +30,15 @@
 | **সোর্স আর্কাইভ** | `pdf-gallery-text-handel.zip` |
 | **রিলিজ ফাইল** | [`PDF-Gallery-v3.0.0-release.apk`](https://github.com/HasibApps/apk-02/releases/download/v3.0.0/PDF-Gallery-v3.0.0-release.apk) |
 | **স্থায়ী Latest ফাইল** | [`PDF-Gallery-release.apk`](https://github.com/HasibApps/apk-02/releases/latest/download/PDF-Gallery-release.apk) |
-| **সাইজ** | __APK_SIZE__ (`__APK_BYTES__` bytes) — অফলাইন ML Kit OCR মডেলসহ |
+| **সাইজ** | **55.50 MiB** (58.19 MB · 58,192,491 bytes) — অফলাইন ML Kit OCR মডেলসহ |
 | **আর্কিটেকচার (ABI)** | **Universal** (সকল 32-bit ও 64-bit Android ডিভাইসে চলবে) |
 | **Android সংস্করণ** | `minSdk 24` (**Android 7.0**) → `targetSdk 36` / `compileSdk 36.1` (**Android 16**) |
 | **টেক স্ট্যাক** | Kotlin `2.2.10` · Jetpack Compose (Material 3) · ML Kit OCR · OkHttp · AGP `9.1.1` · Gradle `9.3.1` |
 | **বিল্ড টাইপ** | `release` (**Signed & Verified**) — GitHub Actions দিয়ে বিল্ড |
-| **সাইনিং স্কিম** | APK Signature Scheme **v1 + v2 + v3** (`RSA 2048` / `SHA256withRSA`) |
+| **সাইনিং স্কিম** | APK Signature Scheme **v2 + v3** (`RSA 2048` / `SHA256withRSA`) |
 | **সার্টিফিকেট SHA-256** | `80:7F:93:B3:8B:7E:B4:AB:B7:30:B2:EF:13:5C:83:26:02:A9:B4:BA:40:00:39:4B:D0:5D:56:59:8E:E6:49:3A` |
-| **APK SHA-256** | `__APK_SHA256__` |
-| **বিল্ড তথ্য** | [GitHub Actions Run #__RUN_NUMBER__](https://github.com/HasibApps/apk-02/actions/runs/__RUN_ID__) · Commit [`__COMMIT_SHORT__`](https://github.com/HasibApps/apk-02/commit/__COMMIT_FULL__) · `__BUILD_TIME__` |
+| **APK SHA-256** | `27845ad84521f46a9e2698b189ebb53d8a4f4c833a9f32e77b349eb6a56ec6ec` |
+| **বিল্ড তথ্য** | [GitHub Actions Run #3](https://github.com/HasibApps/apk-02/actions/runs/44263545316) · Commit [`5437b6a`](https://github.com/HasibApps/apk-02/commit/5437b6a965153b966741941fc01ac08706f02c96) · `18 Nov 2026, 08:06 UTC` |
 | **অ্যাপ লোগো** | ব্যবহারকারীর দেওয়া ছবি — [`assets/app-logo.png`](assets/app-logo.png) (লঞ্চার আইকন, টুলবার ও Lens বারে ব্যবহৃত) |
 
 <details>
@@ -47,7 +47,7 @@
 ```bash
 # Linux / macOS / Termux — ফাইল চেকসাম যাচাই
 sha256sum PDF-Gallery-v3.0.0-release.apk
-# -> __APK_SHA256__
+# -> 27845ad84521f46a9e2698b189ebb53d8a4f4c833a9f32e77b349eb6a56ec6ec
 
 # Windows PowerShell — ফাইল চেকসাম যাচাই
 Get-FileHash PDF-Gallery-v3.0.0-release.apk -Algorithm SHA256
@@ -154,7 +154,7 @@ apksigner verify --verbose --print-certs PDF-Gallery-v3.0.0-release.apk
 1. Temurin JDK 17, Android SDK (API 36.1) ও Gradle `9.3.1` সেটআপ হয়
 2. স্থায়ী keystore বের করে **সার্টিফিকেট ফিঙ্গারপ্রিন্ট যাচাই** করা হয় (v2/v3/v4 সব জায়গায় একই কী নিশ্চিত করতে)
 3. সাইন করা `release` APK বিল্ড হয় (`gradle :app:assembleRelease`)
-4. `apksigner` দিয়ে APK Signature Scheme (`v1 + v2 + v3`) ও সার্টিফিকেট যাচাই করে `SHA256SUMS.txt` তৈরি হয়
+4. `apksigner` দিয়ে APK Signature Scheme (`v2 + v3`) ও সার্টিফিকেট যাচাই করে `SHA256SUMS.txt` তৈরি হয়
 5. GitHub Actions Artifact এবং **GitHub Releases**-এ `v<versionName>` ট্যাগে সাইনড APK, `PDF-Gallery-release.apk`, `SHA256SUMS.txt` ও `app-logo.png` আপলোড হয়
 
 ### `v4.0.0` রিলিজ করতে
