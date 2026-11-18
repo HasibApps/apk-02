@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Floating bar drawn on top of the real Google Lens screen -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="12dp"
+    android:paddingTop="4dp"
+    android:paddingEnd="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_lens_nav_bar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp">
+
+        <ImageButton
+            android:id="@+id/btnLensNavPrev"
+            android:layout_width="40dp"
+            android:layout_height="44dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="আগের পৃষ্ঠা"
+            android:src="@drawable/ic_arrow_back"
+            android:tint="#FFFFFF" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivLensNavLogo"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="PDF Gallery"
+                android:src="@drawable/ic_app_logo_new" />
+
+            <TextView
+                android:id="@+id/tvLensNavPage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnLensNavNext"
+            android:layout_width="40dp"
+            android:layout_height="44dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="পরের পৃষ্ঠা"
+            android:src="@drawable/ic_arrow_forward"
+            android:tint="#FFFFFF" />
+
+        <!-- New: Note / Copy / Agent (Stop replaces Agent while it runs) -->
+        <ImageButton
+            android:id="@+id/btnLensNavNote"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="2dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="আনলিমিটেড নোট"
+            android:padding="7dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_note"
+            android:tint="#FFC107" />
+
+        <ImageButton
+            android:id="@+id/btnLensNavCopy"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="পৃষ্ঠার লেখা কপি করে নোটে পেস্ট"
+            android:padding="7dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_content_copy"
+            android:tint="#8AB4F8" />
+
+        <ImageButton
+            android:id="@+id/btnLensNavAgent"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="অটো এজেন্ট চালু করুন"
+            android:padding="6dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_agent"
+            android:tint="#81C995" />
+
+        <ImageButton
+            android:id="@+id/btnLensNavStopAgent"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:background="@drawable/bg_agent_stop"
+            android:contentDescription="এজেন্ট বন্ধ করুন"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_stop_agent"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/btnLensNavClose"
+            android:layout_width="32dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="বন্ধ করুন"
+            android:padding="7dp"
+            android:src="@drawable/ic_close"
+            android:tint="#B0BEC5" />
+    </LinearLayout>
+
+    <!-- Agent progress indicator (visible only while the agent is running / just finished) -->
+    <LinearLayout
+        android:id="@+id/layoutAgentPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_agent_panel"
+        android:orientation="vertical"
+        android:paddingStart="12dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvAgentTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🤖 Agent Running..."
+            android:textColor="#81C995"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/pbAgent"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:max="100" />
+
+        <TextView
+            android:id="@+id/tvAgentPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvAgentCompleted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvAgentStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FDD663"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

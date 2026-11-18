@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">PDF Gallery</string>
+    <string name="search_hint">Search PDFs…</string>
+    <string name="no_pdfs_found">No PDF documents found</string>
+    <string name="no_pdfs_subtitle">Generate sample documents here, or open the Download tab to import a PDF or URL</string>
+    <string name="import_pdf">Import PDF</string>
+    <string name="generate_samples">Create Samples</string>
+    <string name="open_with">Open with</string>
+    <string name="cut">Cut</string>
+    <string name="copy">Copy</string>
+    <string name="delete">Delete</string>
+    <string name="rename">Rename</string>
+    <string name="compress">Compress</string>
+    <string name="share">Share</string>
+    <string name="copy_path">Copy path</string>
+    <string name="create_shortcut">Create shortcut</string>
+    <string name="properties">Properties</string>
+    <string name="cancel">Cancel</string>
+    <string name="add_to_home">Add to Home Screen</string>
+    <string name="confirm">Confirm</string>
+    <string name="screen_snippet">Screen Snippet</string>
+    <string name="capture_screen">Capture Screen</string>
+    <string name="save">Save</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="floating_overlay_title">PDF Assistant Overlay</string>
+    <string name="floating_overlay_desc">Tap floating icon to capture and share screen snippet</string>
+    <string name="lens_accessibility_service_name">PDF Gallery – Lens Auto Copy</string>
+    <string name="lens_accessibility_desc">Google Lens পেজে স্বয়ংক্রিয়ভাবে "Select text" ও "Copy text" ট্যাপ করে সব লেখা কপি করে। শুধু Google / Google Lens স্ক্রিনে কাজ করে।</string>
+</resources>
