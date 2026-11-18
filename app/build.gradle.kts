@@ -1,4 +1,5 @@
 import com.google.gms.googleservices.GoogleServicesPlugin.MissingGoogleServicesStrategy
+import java.util.Base64
 
 plugins {
   alias(libs.plugins.android.application)
@@ -38,7 +39,7 @@ android {
           if (b64File.exists() && !decoded.exists()) {
             decoded.parentFile.mkdirs()
             val cleaned = b64File.readText().replace(Regex("\\s+"), "")
-            decoded.writeBytes(java.util.Base64.getDecoder().decode(cleaned))
+            decoded.writeBytes(Base64.getDecoder().decode(cleaned))
           }
           decoded
         }
